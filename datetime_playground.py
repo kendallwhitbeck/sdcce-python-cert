@@ -78,6 +78,7 @@ print("arrhythmic result:", best_summer.strftime("It was the summer of \'%Y"))  
 
 
 # Using strptime to convert a string to a datetime object with time of day
+print("\n~~~~~~~~ strptime example ~~~~~~~~")
 date_string_to_parse = "1969-06-30 8 pm"
 parsed_time = datetime.datetime.strptime(date_string_to_parse, "%Y-%m-%d %I %p")
 print(f"parsed_time={parsed_time}")
@@ -88,6 +89,8 @@ print(f"parsed_time={parsed_time}")
 
 
 # Create timezone delta
+print("\n~~~~~~~~ timezone delta example ~~~~~~~~")
 tz_pdt = datetime.timedelta(hours=-7)  # 7 hours behind UTC = PDT
 dt_pdt = datetime.datetime.now() + tz_pdt
 print(f"dt_pdt={dt_pdt}")
+pass
