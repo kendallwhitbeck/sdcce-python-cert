@@ -8,12 +8,15 @@ Description: This program answers the assigment question specified above. TODO
 
 import os  # os.system('cls'): clear terminal window text in Windows OS
 
-# <describe function here> TODO
 def function_placeholder(): # TODO
-    pass # TODO
+    """_summary_ TODO
+
+    Returns:
+        _type_: _description_
+    """
+    pass # TODO implement code
     return # TBD
 
-# <describe execution here> TODO
 def main():
     # Clear terminal window text in Windows OS
     os.system('cls')
