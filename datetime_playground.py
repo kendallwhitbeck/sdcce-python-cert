@@ -93,4 +93,25 @@ print("\n~~~~~~~~ timezone delta example ~~~~~~~~")
 tz_pdt = datetime.timedelta(hours=-7)  # 7 hours behind UTC = PDT
 dt_pdt = datetime.datetime.now() + tz_pdt
 print(f"dt_pdt={dt_pdt}")
-pass
+two_days_ago = cur_time + datetime.timedelta(days=-2)
+print(f"two_days_ago={two_days_ago}")
+
+# Assigning the "date" class
+my_date = datetime.date(2023, 5, 11)
+
+# Assigning the "datetime" class
+my_datetime = datetime.datetime(2023, 5, 11, 14, 30)
+my_datetime2 = datetime.datetime(2023, 5, 11, 12, 30)
+
+# Assigning the "time" class
+my_time = datetime.time(14, 30)
+my_time2 = datetime.time(12, 30)
+
+# Assigning the "timedelta" class
+my_timedelta = datetime.timedelta(days=3, hours=5)
+
+print("\n~~~~~~~~Calculating timedelta between my_datetime and my_datetime2:~~~~~~~~~")
+print(f"my_datetime = {my_datetime}")
+print(f"my_datetime2 = {my_datetime2}")
+calculated_timedelta = my_datetime - my_datetime2
+print(f"calculated_timedelta = {calculated_timedelta}")
