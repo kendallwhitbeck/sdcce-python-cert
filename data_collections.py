@@ -59,3 +59,16 @@ print("\n~~~~~~~~~~~ Index List Method ~~~~~~~~~~")
 print(larger_grocery_list)
 print(f"index of 'spinach' in larger_grocery_list: {larger_grocery_list.index('spinach')}")
 
+# Using list's sort method with reverse keyword.
+print("\n~~~~~~~~~~~ Reverse List Method ~~~~~~~~~~")
+count_to_5 = [1, 2, 3, 4, 5]
+count_to_5.sort(reverse=True)
+print(count_to_5)  # Outputs: [5, 4, 3, 2, 1]
+
+alphabets = ['a','e','d','c','b']
+alphabets.sort()
+print(alphabets)
+
+random_numbers = [2,5,6,1,8,3]
+random_numbers.sort()
+print(random_numbers)

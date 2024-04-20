@@ -58,7 +58,8 @@ print("\n~~~~~~~~~~~~~~~~~~~~~ A1 to C6 Example ~~~~~~~~~~~~~~~~~~~~~\n")
 # Use pandas to read an excel file denoting cells A1 through C6
 a1_c6_dataframe = pd.read_excel("data\cells_a1_to_c6.xlsx")  # this is incorrect: by looking at the data sheet, can tell we need to specify no header
 a1_c6_dataframe_no_header = pd.read_excel("data\cells_a1_to_c6.xlsx", header=None)
-# print(f"\na1_c6_dataframe:\n{a1_c6_dataframe}")
-# print(f"\na1_c6_dataframe_no_header:\n{a1_c6_dataframe_no_header}")
 for element in a1_c6_dataframe_no_header.items():
     print(element, "\n\n~~~\n")
+# print(f"a1_c6_dataframe:\n{a1_c6_dataframe}")
+print(f"\na1_c6_dataframe_no_header:\n{a1_c6_dataframe_no_header}")
+
