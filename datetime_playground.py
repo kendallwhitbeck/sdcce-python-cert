@@ -115,3 +115,11 @@ print(f"my_datetime = {my_datetime}")
 print(f"my_datetime2 = {my_datetime2}")
 calculated_timedelta = my_datetime - my_datetime2
 print(f"calculated_timedelta = {calculated_timedelta}")
+
+print(my_datetime > my_datetime2)
+
+# Using `from datetime import datetime` to create a datetime object with less code
+from datetime import datetime
+birthday = datetime(1944, 1, 8)
+birthday = birthday.strftime("%B %d, %Y (%A)")
+print("Your birthday is:", birthday)
