@@ -73,7 +73,12 @@ random_numbers = [2,5,6,1,8,3]
 random_numbers.sort()
 print(random_numbers)
 
-
 z = [-75, 44, 0, 122, 4543 , -34]
 
+# Using enumerate on a list
+ten_count = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for idx, val in enumerate(ten_count):
+    print(f"idx={idx}, val={val}")
+
+# End
 print("end")
