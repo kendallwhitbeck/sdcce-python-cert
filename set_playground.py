@@ -42,3 +42,38 @@ print(f"a_union_b = {a_union_b}")
 print(f"color_choices = {color_choices}")
 print(f"color_choices.union({'white', 'black'}) =\n{color_choices.union({'white', 'black'})}")
 
+# Create a set using set()
+building_in_question = set(["Building 3"])
+building_in_question2 = {"Building 3"}
+print(building_in_question == building_in_question2)
+
+# # Use a set to remove duplicates and display which values were removed
+original_list = [1, 2, 3, 3, 4, 5]
+unique_set = set(original_list)
+duplicates = []
+# # DOES NOT WORK
+for item in original_list:
+    if item not in unique_set:
+        duplicates.append(item)
+# print(f"duplicates = {duplicates}")
+
+# # DOES NOT WORK
+# Convert the list to a set to remove duplicates
+unique_set = set(original_list)
+# Identify the items that were removed
+removed_items = [item for item in original_list if item not in unique_set]
+# Print the removed items
+# # DOES NOT WORK
+# print("Removed items:", removed_items)
+
+for item in unique_set:
+    if original_list.count(item) > 1:
+        print(f"item = {item}; count = {original_list.count(item)}")
+
+# using sorted() on a set
+alphabet_set = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"}  # has no particular order
+sorted(alphabet_set)  # does not affect the set in later lines
+print(alphabet_set)  # will print a set that is (probably) out of order (depending on the underlying hashmap)
+print(sorted(alphabet_set))  # will print a list in order
+print(sorted(alphabet_set, reverse=True))  # will be in reverse order
+pass

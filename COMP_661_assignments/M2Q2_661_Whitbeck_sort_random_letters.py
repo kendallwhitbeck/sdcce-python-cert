@@ -52,7 +52,7 @@ def main():
     os.system('cls')
 
     # Match console output with expected results
-    test_run = True
+    test_run = False
 
     # Generate and print list of letters.
     if test_run:
