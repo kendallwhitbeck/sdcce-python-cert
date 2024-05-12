@@ -1,6 +1,6 @@
 # file_io_playground.py
 """
-This is what data/file.txt looks like initially:
+This is what data/file_io_playground.txt looks like initially:
 Index, Temp
 0, 72
 1, 72
@@ -9,7 +9,7 @@ Index, Temp
 4, 40
 5, 38
 
-This is what I want data/file.txt to look like after the program is run:
+This is what I want data/file_io_playground.txt to look like after the program is run:
 Hello, World!
 Index, Temp
 0, 72
@@ -20,8 +20,8 @@ Index, Temp
 5, 38
 """
 
-# fileObj = open("data/file.txt", mode='r')  # if file does not exist, fails with FileNotFoundError: [Errno 2] No such file or directory: 'file.txt'
-fileObj = open("data/file.txt", mode="a+")  # if file does not exist, creates it. If file exists, overwrites it.
+# fileObj = open("data/file_io_playground.txt", mode='r')  # if file does not exist, fails with FileNotFoundError: [Errno 2] No such file or directory: 'file_io_playground.txt'
+fileObj = open("data/file_io_playground.txt", mode="a+")  # if file does not exist, creates it. If file exists, overwrites it.
 
 file_data = fileObj.read()
 

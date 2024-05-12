@@ -17,8 +17,9 @@ def function_placeholder(): # TODO
     return # TBD
 
 def main():
-    # Clear terminal window text in Windows OS.
-    os.system('cls')
+    # Clear terminal window text if in Windows OS.
+    if os.name == 'nt':
+        os.system('cls')
 
     pass # TODO implement code
 

@@ -1,7 +1,4 @@
-Index, Temp
-0, 72
-1, 72
-2, 6
-3, 55
-4, 40
-5, 38Hello, World!
+This is a test file
+Hello Student
+Testing 1,2,3 - testing !
+Python rocks !
