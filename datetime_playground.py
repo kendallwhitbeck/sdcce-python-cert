@@ -57,7 +57,7 @@ print(dt1)
 
 # Formatting date and time using strftime (string format time)
 cur_time=datetime.datetime.now()
-print(f"cur_time={cur_time}")
+print(f"cur_time=    {cur_time}")
 formatted_dt = cur_time.strftime('%Y-%m-%d %H:%M:%S.%f')[:-4]
 print(f"formatted_dt={formatted_dt}")
 
