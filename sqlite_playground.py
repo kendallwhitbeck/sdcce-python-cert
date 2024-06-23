@@ -1,4 +1,5 @@
-#!"C:\Windows\py.exe"
+""" #!"C:\Windows\py.exe" """
+#!/usr/bin/env python3
 
 ### Program Name: sqlite_playground.py
 ### Author: Kendall Whitbeck
