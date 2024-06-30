@@ -1,0 +1,15 @@
+[Movies] : 2024-06-30 15:02:04,497 : ERROR : C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod3\movies.db not found or zero size
+[Movies] : 2024-06-30 15:02:04,498 : DEBUG : DB Connected
+[Movies] : 2024-06-30 15:02:04,498 : DEBUG : Cursor set
+[Movies] : 2024-06-30 15:02:04,501 : DEBUG : DB Query executed and returned
+[Movies] : 2024-06-30 15:02:04,501 : DEBUG : DB Query executed and returned
+[Movies] : 2024-06-30 15:02:04,501 : DEBUG : DB Query executed and returned
+[Movies] : 2024-06-30 15:02:04,514 : DEBUG : DB Query executed and returned
+[Movies] : 2024-06-30 15:02:04,514 : DEBUG : DB Query executed and returned
+[Movies] : 2024-06-30 15:02:04,514 : DEBUG : DB Query executed and returned
+[Movies] : 2024-06-30 15:02:04,514 : DEBUG : DB Query executed and returned
+[Movies] : 2024-06-30 15:02:04,514 : DEBUG : DB Query executed and returned
+[Movies] : 2024-06-30 15:02:04,514 : DEBUG : DB Query executed and returned
+[Movies] : 2024-06-30 15:02:04,522 : DEBUG : Transactions committed
+[Movies] : 2024-06-30 15:02:04,522 : DEBUG : DB Closed
+[Movies] : 2024-06-30 15:02:04,522 : INFO : Completed database operations.

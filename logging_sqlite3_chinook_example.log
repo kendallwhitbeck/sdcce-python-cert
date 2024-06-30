@@ -1,0 +1,6 @@
+[Artists]:2024-06-28 13:42:10,689:DEBUG:db/chinook.db found and not zero size
+[Artists]:2024-06-28 13:42:10,689:DEBUG:DB Connected
+[Artists]:2024-06-28 13:42:10,689:DEBUG:Cursor set
+[Artists]:2024-06-28 13:42:10,690:DEBUG:DB Query executed and returned
+[Artists]:2024-06-28 13:42:10,690:DEBUG:[Info] DB Closed
+[Artists]:2024-06-28 13:42:10,691:INFO:Completed.

@@ -1,0 +1,6 @@
+[Movies]:2024-06-29 09:13:38,654:DEBUG:db/chinook.db found and not zero size
+[Movies]:2024-06-29 09:13:38,654:DEBUG:DB Connected
+[Movies]:2024-06-29 09:13:38,654:DEBUG:Cursor set
+[Movies]:2024-06-29 09:17:33,227:DEBUG:DB Query executed and returned
+[Movies]:2024-06-29 09:18:52,721:DEBUG:[Info] DB Closed
+[Movies]:2024-06-29 09:18:54,483:INFO:Completed.
