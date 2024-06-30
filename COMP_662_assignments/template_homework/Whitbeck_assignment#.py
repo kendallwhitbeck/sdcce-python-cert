@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python3
 """
-Assignment <#> TODO
+Assignment <#>TODO: <shortTitle>TODO
 Author: Kendall Whitbeck
 San Diego College of Continuing Education (SDCCE) Student ID: 5550203278
 COMP 662: Programming Databases with Python
@@ -17,6 +17,9 @@ def main():
     # Clear terminal window text if in Windows OS.
     if os.name == 'nt':
         os.system('cls')
+    else:
+        # On Linux or MacOS
+        os.system('clear')
 
     pass # TODO implement code
 

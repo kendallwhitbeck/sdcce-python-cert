@@ -14,10 +14,14 @@ def function_placeholder(): # TODO
     return # TBD
 
 def main():
-    # Clear terminal window text in Windows OS
-    os.system('cls')
+    # Clear terminal window text if in Windows OS.
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        # On Linux or MacOS
+        os.system('clear')
 
-    # Demonstrate completion of Module X TODO, Question X TODO      
+    # Demonstrate completion of Module X TODO, Question X TODO
     pass # TODO implement code
 
 # Ensure main() is executed only if this .py file is executed directly (i.e., not imported by another .py file)

@@ -1,3 +1,7 @@
+"""
+Recursive function that reverses the input string that reveals 'palindromes' ('semordnilap' backwards).
+"""
+
 def semordnilap(aString,index):
     if index == 0:
         print(f"aString=`{aString}`")
