@@ -25,25 +25,37 @@ import sqlite3
 import logging
 import db_utils as db  # Logging sqlite3 database functions.
 
-def db_update(cur, table="Movie", attribute="year", value=1995, primarykey="movieID", condition=5):
+def db_update(cur, table, update_attribute, update_value, where_attribute, where_value):
     """ Update database entry.
     """
+    # Sanitize input and insert quoutes for strings to enable querying whitespace
+    if type(table) == str: table = f"'{str(table)}'"
+    if type(update_attribute) == str: update_attribute = f"'{str(update_attribute)}'"
+    if type(update_value) == str: update_value = f"'{str(update_value)}'"
+    if type(where_attribute) == str: where_attribute = f"'{str(where_attribute)}'"
+    if type(where_value) == str: where_value = f"'{str(where_value)}'"
+
     # Define update query
     query_update = str(f"UPDATE {table} "
-                       f"SET {attribute} = {value} "
-                       f"WHERE {primarykey} = {condition};")
+                       f"SET {update_attribute} = {update_value} "
+                       f"WHERE {where_attribute} = {where_value};")
     # Execute update query
     db.db_runquery(cur, query_update)
 
-def db_delete(cur, table="Movie", primarykey="movieID", condition=5):
+def db_delete(cur, table, where_attribute, where_value):
     """ Delete database entry.
     """
+    # Sanitize input and insert quoutes for strings to enable querying whitespace
+    if type(table) == str: table = f"'{str(table)}'"
+    if type(where_attribute) == str: where_attribute = f"'{str(where_attribute)}'"
+    if type(where_value) == str: where_value = f"'{str(where_value)}'"
+
     # Define delete query
     query_delete = str(f"DELETE FROM {table} "
-                       f"WHERE {primarykey} = {condition};")
+                       f"WHERE {where_attribute} = {where_value};")
 
     # Prompt user to confirm deletion
-    run_deletion = str(input(f"Are you sure you want to delete {primarykey}={condition} from the `{table}` table (y/n)?"))
+    run_deletion = str(input(f"Are you sure you want to delete {where_attribute}={where_value} from the `{table}` table (y/n)?"))
     print()  # newline
 
     # If user confirms deletion
@@ -53,7 +65,7 @@ def db_delete(cur, table="Movie", primarykey="movieID", condition=5):
     else:
         # Abort deletion
         print("Deletion aborted.\n")
-        
+
 def db_lookup_by_year(cur):
     """ Look up movie by user-input year.
     """
@@ -117,8 +129,6 @@ def main():
     else:  # Linux or MacOS.
         os.system('clear')
 
-    print(f"# TODO before delivering, comment out sys.path.append lines and place db_utils.py in same folder instead.")
-
     # Use name of this Python script to name log file.
     script_filename = os.path.splitext(os.path.basename(__file__))[0]
     log_filename = f"{script_filename}.log"
@@ -142,11 +152,14 @@ def main():
     try:
         conn = db.db_connect(dbfile)  # Connect to database.
         cur = db.db_cursor(conn)  # Get cursor in database.
+
         # Run Database update queries.
-        db_update(cur, table2_name, "year", 1995, pk2_name, 5)  # Toy Story movie DB values
-        db_delete(cur, table2_name, pk2_name, 11)  # Lawence of Arabia movie DB values
+        db_update(cur, table2_name, "year", 1995, "name", "Toy Story")  # Toy Story movie DB values
+        db_delete(cur, table2_name, "name", "Lawrence of Arabia")  # Lawrence of Arabia movie DB values
+
         # Run User Lookup by Year
         db_lookup_by_year(cur)
+
     except sqlite3.Error as error:
         logging.error(f"Error establishing database connection or cursor: {error}".format())
     finally:
@@ -160,6 +173,8 @@ def main():
     logging.info("Completed database operations".format())
     print('Bye for now - see you at the movies!')
 
-# Ensure main() is executed only if this .py file is executed directly (i.e., not imported by another .py file)
+# Ensure main() is executed only if this .py file is executed directly
+# (i.e., not imported by another .py file)
 if __name__ == "__main__":
     main()
+    print(f"# TODO before delivering, comment out sys.path.append lines and place db_utils.py in same folder instead.")
