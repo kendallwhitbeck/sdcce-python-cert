@@ -29,11 +29,11 @@ def db_update(cur, table, update_attribute, update_value, where_attribute, where
     """ Update database entry.
     """
     # Sanitize input and insert quoutes for strings to enable querying whitespace
-    if type(table) == str: table = f"'{str(table)}'"
-    if type(update_attribute) == str: update_attribute = f"'{str(update_attribute)}'"
-    if type(update_value) == str: update_value = f"'{str(update_value)}'"
-    if type(where_attribute) == str: where_attribute = f"'{str(where_attribute)}'"
-    if type(where_value) == str: where_value = f"'{str(where_value)}'"
+    if type(table) == str: table = f'"{str(table)}"'
+    if type(update_attribute) == str: update_attribute = f'"{str(update_attribute)}"'
+    if type(update_value) == str: update_value = f'"{str(update_value)}"'
+    if type(where_attribute) == str: where_attribute = f'"{str(where_attribute)}"'
+    if type(where_value) == str: where_value = f'"{str(where_value)}"'
 
     # Define update query
     query_update = str(f"UPDATE {table} "
@@ -46,16 +46,16 @@ def db_delete(cur, table, where_attribute, where_value):
     """ Delete database entry.
     """
     # Sanitize input and insert quoutes for strings to enable querying whitespace
-    if type(table) == str: table = f"'{str(table)}'"
-    if type(where_attribute) == str: where_attribute = f"'{str(where_attribute)}'"
-    if type(where_value) == str: where_value = f"'{str(where_value)}'"
+    if type(table) == str: table = f'"{str(table)}"'
+    if type(where_attribute) == str: where_attribute = f'"{str(where_attribute)}"'
+    if type(where_value) == str: where_value = f'"{str(where_value)}"'
 
     # Define delete query
     query_delete = str(f"DELETE FROM {table} "
                        f"WHERE {where_attribute} = {where_value};")
 
     # Prompt user to confirm deletion
-    run_deletion = str(input(f"Are you sure you want to delete {where_attribute}={where_value} from the `{table}` table (y/n)?"))
+    run_deletion = str(input(f"Are you sure you want to delete {where_attribute}={where_value} from the {table} table (y/n)?"))
     print()  # newline
 
     # If user confirms deletion
