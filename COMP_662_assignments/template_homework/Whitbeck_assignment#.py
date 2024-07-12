@@ -7,18 +7,17 @@ San Diego College of Continuing Education (SDCCE) Student ID: 5550203278
 COMP 662: Programming Databases with Python
 """
 
-import os  # os.system('cls'): clear terminal window text in Windows OS.
+import os  # clear terminal window text based on Windows or Linux/Mac OS.
 
 def function_placeholder(): # TODO
     pass # TODO implement code
     return # TBD
 
 def main():
-    # Clear terminal window text if in Windows OS.
-    if os.name == 'nt':
+    # Clear terminal window text.
+    if os.name == 'nt':  # Windows OS
         os.system('cls')
-    else:
-        # On Linux or MacOS
+    else:  # Linux or MacOS.
         os.system('clear')
 
     pass # TODO implement code
