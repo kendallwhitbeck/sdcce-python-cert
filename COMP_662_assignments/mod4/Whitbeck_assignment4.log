@@ -46,3 +46,250 @@
 	Query: `UPDATE Movie SET year = 1995 WHERE movieID = 5;`
 [Movies] : 2024-07-12 08:46:51,569 : DEBUG : DB Query executed and returned:
 	Query: `DELETE FROM Movie WHERE movieID = 11;`
+[Movies] : 2024-07-12 09:41:09,479 : DEBUG : DB Query executed and returned:
+	Query: `SELECT m.name as Title, m.year as Year, m.minutes as Length, c.name as Genre FROM Movie as m JOIN Category as c ON m.categoryID = c.categoryID WHERE year = 2;`
+[Movies] : 2024-07-12 09:41:10,854 : DEBUG : Transactions committed
+[Movies] : 2024-07-12 09:41:10,854 : DEBUG : DB Closed
+[Movies] : 2024-07-12 09:41:10,854 : INFO : Completed database operations
+[Movies] : 2024-07-12 09:53:28,554 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 09:53:28,554 : DEBUG : DB Connected
+[Movies] : 2024-07-12 09:53:28,554 : DEBUG : Cursor set
+[Movies] : 2024-07-12 09:53:28,554 : DEBUG : DB Query executed and returned:
+	Query: `UPDATE Movie SET year = 1995 WHERE movieID = 5;`
+[Movies] : 2024-07-12 09:53:34,834 : DEBUG : DB Query executed and returned:
+	Query: `DELETE FROM Movie WHERE movieID = 11;`
+[Movies] : 2024-07-12 09:53:39,465 : DEBUG : DB Query executed and returned:
+	Query: `SELECT m.name as Title, m.year as Year, m.minutes as Length, c.name as Genre FROM Movie as m JOIN Category as c ON m.categoryID = c.categoryID WHERE year = 2002;`
+[Movies] : 2024-07-12 09:55:42,425 : DEBUG : Transactions committed
+[Movies] : 2024-07-12 09:55:42,425 : DEBUG : DB Closed
+[Movies] : 2024-07-12 09:55:42,425 : INFO : Completed database operations
+[Movies] : 2024-07-12 09:55:48,094 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 09:55:48,094 : DEBUG : DB Connected
+[Movies] : 2024-07-12 09:55:48,094 : DEBUG : Cursor set
+[Movies] : 2024-07-12 09:55:48,094 : DEBUG : DB Query executed and returned:
+	Query: `UPDATE Movie SET year = 1995 WHERE movieID = 5;`
+[Movies] : 2024-07-12 09:56:02,724 : DEBUG : DB Query executed and returned:
+	Query: `SELECT m.name as Title, m.year as Year, m.minutes as Length, c.name as Genre FROM Movie as m JOIN Category as c ON m.categoryID = c.categoryID WHERE year = 2002;`
+[Movies] : 2024-07-12 09:57:31,390 : DEBUG : Transactions committed
+[Movies] : 2024-07-12 09:57:31,390 : DEBUG : DB Closed
+[Movies] : 2024-07-12 09:57:31,390 : INFO : Completed database operations
+[Movies] : 2024-07-12 09:57:35,674 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 09:57:35,675 : DEBUG : DB Connected
+[Movies] : 2024-07-12 09:57:35,675 : DEBUG : Cursor set
+[Movies] : 2024-07-12 09:57:35,675 : DEBUG : DB Query executed and returned:
+	Query: `UPDATE Movie SET year = 1995 WHERE movieID = 5;`
+[Movies] : 2024-07-12 09:57:42,487 : DEBUG : DB Query executed and returned:
+	Query: `SELECT m.name as Title, m.year as Year, m.minutes as Length, c.name as Genre FROM Movie as m JOIN Category as c ON m.categoryID = c.categoryID WHERE year = 2002;`
+[Movies] : 2024-07-12 09:58:54,259 : DEBUG : Transactions committed
+[Movies] : 2024-07-12 09:58:54,259 : DEBUG : DB Closed
+[Movies] : 2024-07-12 09:58:54,259 : INFO : Completed database operations
+[Movies] : 2024-07-12 09:58:55,293 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 09:58:55,294 : DEBUG : DB Connected
+[Movies] : 2024-07-12 09:58:55,294 : DEBUG : Cursor set
+[Movies] : 2024-07-12 09:58:55,294 : DEBUG : DB Query executed and returned:
+	Query: `UPDATE Movie SET year = 1995 WHERE movieID = 5;`
+[Movies] : 2024-07-12 09:58:58,162 : DEBUG : DB Query executed and returned:
+	Query: `SELECT m.name as Title, m.year as Year, m.minutes as Length, c.name as Genre FROM Movie as m JOIN Category as c ON m.categoryID = c.categoryID WHERE year = 2002;`
+[Movies] : 2024-07-12 09:59:14,339 : DEBUG : Transactions committed
+[Movies] : 2024-07-12 09:59:14,339 : DEBUG : DB Closed
+[Movies] : 2024-07-12 09:59:14,339 : INFO : Completed database operations
+[Movies] : 2024-07-12 09:59:15,358 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 09:59:15,358 : DEBUG : DB Connected
+[Movies] : 2024-07-12 09:59:15,358 : DEBUG : Cursor set
+[Movies] : 2024-07-12 09:59:15,359 : DEBUG : DB Query executed and returned:
+	Query: `UPDATE Movie SET year = 1995 WHERE movieID = 5;`
+[Movies] : 2024-07-12 09:59:16,994 : DEBUG : DB Query executed and returned:
+	Query: `DELETE FROM Movie WHERE movieID = 11;`
+[Movies] : 2024-07-12 09:59:18,596 : DEBUG : DB Query executed and returned:
+	Query: `SELECT m.name as Title, m.year as Year, m.minutes as Length, c.name as Genre FROM Movie as m JOIN Category as c ON m.categoryID = c.categoryID WHERE year = 2002;`
+[Movies] : 2024-07-12 09:59:59,250 : DEBUG : Transactions committed
+[Movies] : 2024-07-12 09:59:59,250 : DEBUG : DB Closed
+[Movies] : 2024-07-12 09:59:59,250 : INFO : Completed database operations
+[Movies] : 2024-07-12 10:00:00,136 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 10:00:00,137 : DEBUG : DB Connected
+[Movies] : 2024-07-12 10:00:00,137 : DEBUG : Cursor set
+[Movies] : 2024-07-12 10:00:00,137 : DEBUG : DB Query executed and returned:
+	Query: `UPDATE Movie SET year = 1995 WHERE movieID = 5;`
+[Movies] : 2024-07-12 10:00:02,915 : DEBUG : DB Query executed and returned:
+	Query: `SELECT m.name as Title, m.year as Year, m.minutes as Length, c.name as Genre FROM Movie as m JOIN Category as c ON m.categoryID = c.categoryID WHERE year = 2002;`
+[Movies] : 2024-07-12 10:00:39,747 : DEBUG : Transactions committed
+[Movies] : 2024-07-12 10:00:39,747 : DEBUG : DB Closed
+[Movies] : 2024-07-12 10:00:39,747 : INFO : Completed database operations
+[Movies] : 2024-07-12 10:00:40,622 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 10:00:40,623 : DEBUG : DB Connected
+[Movies] : 2024-07-12 10:00:40,623 : DEBUG : Cursor set
+[Movies] : 2024-07-12 10:00:40,623 : DEBUG : DB Query executed and returned:
+	Query: `UPDATE Movie SET year = 1995 WHERE movieID = 5;`
+[Movies] : 2024-07-12 10:00:41,666 : DEBUG : DB Query executed and returned:
+	Query: `DELETE FROM Movie WHERE movieID = 11;`
+[Movies] : 2024-07-12 10:00:42,694 : DEBUG : DB Query executed and returned:
+	Query: `SELECT m.name as Title, m.year as Year, m.minutes as Length, c.name as Genre FROM Movie as m JOIN Category as c ON m.categoryID = c.categoryID WHERE year = 2002;`
+[Movies] : 2024-07-12 10:01:31,874 : DEBUG : Transactions committed
+[Movies] : 2024-07-12 10:01:31,874 : DEBUG : DB Closed
+[Movies] : 2024-07-12 10:01:31,874 : INFO : Completed database operations
+[Movies] : 2024-07-12 10:01:33,228 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 10:01:33,228 : DEBUG : DB Connected
+[Movies] : 2024-07-12 10:01:33,228 : DEBUG : Cursor set
+[Movies] : 2024-07-12 10:01:33,228 : DEBUG : DB Query executed and returned:
+	Query: `UPDATE Movie SET year = 1995 WHERE movieID = 5;`
+[Movies] : 2024-07-12 10:01:36,017 : DEBUG : DB Query executed and returned:
+	Query: `DELETE FROM Movie WHERE movieID = 11;`
+[Movies] : 2024-07-12 10:01:39,088 : DEBUG : DB Query executed and returned:
+	Query: `SELECT m.name as Title, m.year as Year, m.minutes as Length, c.name as Genre FROM Movie as m JOIN Category as c ON m.categoryID = c.categoryID WHERE year = 2100;`
+[Movies] : 2024-07-12 10:01:40,483 : DEBUG : Transactions committed
+[Movies] : 2024-07-12 10:01:40,483 : DEBUG : DB Closed
+[Movies] : 2024-07-12 10:01:40,483 : INFO : Completed database operations
+[Movies] : 2024-07-12 10:01:41,505 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 10:01:41,505 : DEBUG : DB Connected
+[Movies] : 2024-07-12 10:01:41,505 : DEBUG : Cursor set
+[Movies] : 2024-07-12 10:01:41,505 : DEBUG : DB Query executed and returned:
+	Query: `UPDATE Movie SET year = 1995 WHERE movieID = 5;`
+[Movies] : 2024-07-12 10:30:18,176 : DEBUG : DB Query executed and returned:
+	Query: `SELECT m.name as Title, m.year as Year, m.minutes as Length, c.name as Genre FROM Movie as m JOIN Category as c ON m.categoryID = c.categoryID WHERE year = 2;`
+[Movies] : 2024-07-12 10:30:19,166 : DEBUG : Transactions committed
+[Movies] : 2024-07-12 10:30:19,166 : DEBUG : DB Closed
+[Movies] : 2024-07-12 10:30:19,166 : INFO : Completed database operations
+[Movies] : 2024-07-12 10:30:20,484 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 10:30:20,485 : DEBUG : DB Connected
+[Movies] : 2024-07-12 10:30:20,485 : DEBUG : Cursor set
+[Movies] : 2024-07-12 10:30:20,485 : ERROR : Error executing query:
+	Error: near "Story": syntax error
+	Query: `UPDATE Movie SET year = 1995 WHERE name = Toy Story;`
+[Movies] : 2024-07-12 10:30:27,473 : ERROR : Error executing query:
+	Error: near "of": syntax error
+	Query: `DELETE FROM Movie WHERE name = Lawence of Arabia;`
+[Movies] : 2024-07-12 10:30:30,304 : DEBUG : DB Query executed and returned:
+	Query: `SELECT m.name as Title, m.year as Year, m.minutes as Length, c.name as Genre FROM Movie as m JOIN Category as c ON m.categoryID = c.categoryID WHERE year = 2002;`
+[Movies] : 2024-07-12 10:30:35,078 : DEBUG : Transactions committed
+[Movies] : 2024-07-12 10:30:35,078 : DEBUG : DB Closed
+[Movies] : 2024-07-12 10:30:35,078 : INFO : Completed database operations
+[Movies] : 2024-07-12 10:31:38,140 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 10:31:38,141 : DEBUG : DB Connected
+[Movies] : 2024-07-12 10:31:38,141 : DEBUG : Cursor set
+[Movies] : 2024-07-12 10:31:38,141 : ERROR : Error executing query:
+	Error: near "Story": syntax error
+	Query: `UPDATE Movie SET year = 1995 WHERE name = Toy Story;`
+[Movies] : 2024-07-12 10:31:40,739 : ERROR : Error executing query:
+	Error: near "of": syntax error
+	Query: `DELETE FROM Movie WHERE name = Lawence of Arabia;`
+[Movies] : 2024-07-12 10:31:47,360 : DEBUG : DB Query executed and returned:
+	Query: `SELECT m.name as Title, m.year as Year, m.minutes as Length, c.name as Genre FROM Movie as m JOIN Category as c ON m.categoryID = c.categoryID WHERE year = 1995;`
+[Movies] : 2024-07-12 10:31:52,946 : DEBUG : Transactions committed
+[Movies] : 2024-07-12 10:31:52,946 : DEBUG : DB Closed
+[Movies] : 2024-07-12 10:31:52,946 : INFO : Completed database operations
+[Movies] : 2024-07-12 10:32:08,255 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 10:32:08,256 : DEBUG : DB Connected
+[Movies] : 2024-07-12 10:32:08,256 : DEBUG : Cursor set
+[Movies] : 2024-07-12 12:18:03,514 : ERROR : Error executing query:
+	Error: near "Story": syntax error
+	Query: `UPDATE Movie SET year = 1995 WHERE name = Toy Story;`
+[Movies] : 2024-07-12 12:18:55,548 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 12:18:55,550 : DEBUG : DB Connected
+[Movies] : 2024-07-12 12:18:55,550 : DEBUG : Cursor set
+[Movies] : 2024-07-12 12:25:41,067 : DEBUG : DB Query executed and returned:
+	Query: `UPDATE 'Movie' SET 'year' = '1995' WHERE 'name' = 'Toy Story';`
+[Movies] : 2024-07-12 12:27:58,566 : ERROR : Error executing query:
+	Error: near "of": syntax error
+	Query: `DELETE FROM Movie WHERE name = Lawence of Arabia;`
+[Movies] : 2024-07-12 12:29:31,695 : DEBUG : DB Query executed and returned:
+	Query: `SELECT m.name as Title, m.year as Year, m.minutes as Length, c.name as Genre FROM Movie as m JOIN Category as c ON m.categoryID = c.categoryID WHERE year = 20020;`
+[Movies] : 2024-07-12 12:29:36,233 : DEBUG : DB Query executed and returned:
+	Query: `SELECT m.name as Title, m.year as Year, m.minutes as Length, c.name as Genre FROM Movie as m JOIN Category as c ON m.categoryID = c.categoryID WHERE year = 2002;`
+[Movies] : 2024-07-12 12:29:42,845 : DEBUG : Transactions committed
+[Movies] : 2024-07-12 12:29:42,845 : DEBUG : DB Closed
+[Movies] : 2024-07-12 12:29:42,845 : INFO : Completed database operations
+[Movies] : 2024-07-12 12:30:45,827 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 12:30:45,827 : DEBUG : DB Connected
+[Movies] : 2024-07-12 12:30:45,827 : DEBUG : Cursor set
+[Movies] : 2024-07-12 12:30:45,827 : DEBUG : DB Query executed and returned:
+	Query: `UPDATE 'Movie' SET 'year' = '1995' WHERE 'name' = 'Toy Story';`
+[Movies] : 2024-07-12 12:30:49,333 : ERROR : Error executing query:
+	Error: near "of": syntax error
+	Query: `DELETE FROM Movie WHERE name = Lawrence of Arabia;`
+[Movies] : 2024-07-12 12:30:52,706 : DEBUG : DB Query executed and returned:
+	Query: `SELECT m.name as Title, m.year as Year, m.minutes as Length, c.name as Genre FROM Movie as m JOIN Category as c ON m.categoryID = c.categoryID WHERE year = 2002;`
+[Movies] : 2024-07-12 12:30:59,522 : DEBUG : DB Query executed and returned:
+	Query: `SELECT m.name as Title, m.year as Year, m.minutes as Length, c.name as Genre FROM Movie as m JOIN Category as c ON m.categoryID = c.categoryID WHERE year = 1995;`
+[Movies] : 2024-07-12 12:31:06,388 : DEBUG : Transactions committed
+[Movies] : 2024-07-12 12:31:06,388 : DEBUG : DB Closed
+[Movies] : 2024-07-12 12:31:06,388 : INFO : Completed database operations
+[Movies] : 2024-07-12 12:35:28,726 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 12:35:28,726 : DEBUG : DB Connected
+[Movies] : 2024-07-12 12:35:28,726 : DEBUG : Cursor set
+[Movies] : 2024-07-12 12:35:28,726 : DEBUG : DB Query executed and returned:
+	Query: `UPDATE 'Movie' SET 'year' = 1995 WHERE 'name' = 'Toy Story';`
+[Movies] : 2024-07-12 12:35:37,143 : ERROR : Error executing query:
+	Error: near "of": syntax error
+	Query: `DELETE FROM Movie WHERE name = Lawrence of Arabia;`
+[Movies] : 2024-07-12 12:35:45,793 : DEBUG : DB Query executed and returned:
+	Query: `SELECT m.name as Title, m.year as Year, m.minutes as Length, c.name as Genre FROM Movie as m JOIN Category as c ON m.categoryID = c.categoryID WHERE year = 2002;`
+[Movies] : 2024-07-12 12:35:50,855 : DEBUG : Transactions committed
+[Movies] : 2024-07-12 12:35:50,856 : DEBUG : DB Closed
+[Movies] : 2024-07-12 12:35:50,856 : INFO : Completed database operations
+[Movies] : 2024-07-12 13:06:46,925 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 13:06:46,926 : DEBUG : DB Connected
+[Movies] : 2024-07-12 13:06:46,926 : DEBUG : Cursor set
+[Movies] : 2024-07-12 13:08:33,054 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 13:08:33,069 : DEBUG : DB Connected
+[Movies] : 2024-07-12 13:08:33,069 : DEBUG : Cursor set
+[Movies] : 2024-07-12 13:09:23,992 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 13:09:23,992 : DEBUG : DB Connected
+[Movies] : 2024-07-12 13:09:23,992 : DEBUG : Cursor set
+[Movies] : 2024-07-12 13:09:37,542 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 13:09:37,543 : DEBUG : DB Connected
+[Movies] : 2024-07-12 13:09:37,543 : DEBUG : Cursor set
+[Movies] : 2024-07-12 13:09:59,767 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 13:09:59,767 : DEBUG : DB Connected
+[Movies] : 2024-07-12 13:09:59,767 : DEBUG : Cursor set
+[Movies] : 2024-07-12 13:14:11,542 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 13:14:11,542 : DEBUG : DB Connected
+[Movies] : 2024-07-12 13:14:11,542 : DEBUG : Cursor set
+[Movies] : 2024-07-12 13:18:12,172 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 13:18:12,173 : DEBUG : DB Connected
+[Movies] : 2024-07-12 13:18:12,173 : DEBUG : Cursor set
+[Movies] : 2024-07-12 13:18:20,451 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 13:18:20,452 : DEBUG : DB Connected
+[Movies] : 2024-07-12 13:18:20,452 : DEBUG : Cursor set
+[Movies] : 2024-07-12 13:20:37,631 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 13:20:37,632 : DEBUG : DB Connected
+[Movies] : 2024-07-12 13:20:37,632 : DEBUG : Cursor set
+[Movies] : 2024-07-12 13:20:54,424 : DEBUG : Transactions committed
+[Movies] : 2024-07-12 13:20:54,425 : DEBUG : DB Closed
+[Movies] : 2024-07-12 13:21:10,722 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 13:21:10,722 : DEBUG : DB Connected
+[Movies] : 2024-07-12 13:21:10,722 : DEBUG : Cursor set
+[Movies] : 2024-07-12 13:21:59,361 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 13:21:59,362 : DEBUG : DB Connected
+[Movies] : 2024-07-12 13:21:59,362 : DEBUG : Cursor set
+[Movies] : 2024-07-12 13:22:18,872 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 13:22:18,872 : DEBUG : DB Connected
+[Movies] : 2024-07-12 13:22:18,872 : DEBUG : Cursor set
+[Movies] : 2024-07-12 13:23:50,163 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 13:23:50,165 : DEBUG : DB Connected
+[Movies] : 2024-07-12 13:23:50,166 : DEBUG : Cursor set
+[Movies] : 2024-07-12 13:24:43,718 : DEBUG : DB Query executed and returned:
+	Query: `UPDATE 'Movie' SET 'year' = 1995 WHERE 'name' = 'Toy Story';`
+[Movies] : 2024-07-12 13:24:50,015 : ERROR : Error executing query:
+	Error: near "of": syntax error
+	Query: `DELETE FROM Movie WHERE name = Lawrence of Arabia;`
+[Movies] : 2024-07-12 13:24:52,333 : DEBUG : DB Query executed and returned:
+	Query: `SELECT m.name as Title, m.year as Year, m.minutes as Length, c.name as Genre FROM Movie as m JOIN Category as c ON m.categoryID = c.categoryID WHERE year = 1995;`
+[Movies] : 2024-07-12 13:24:58,192 : DEBUG : DB Query executed and returned:
+	Query: `SELECT m.name as Title, m.year as Year, m.minutes as Length, c.name as Genre FROM Movie as m JOIN Category as c ON m.categoryID = c.categoryID WHERE year = 1994;`
+[Movies] : 2024-07-12 13:25:01,116 : DEBUG : Transactions committed
+[Movies] : 2024-07-12 13:25:01,116 : DEBUG : DB Closed
+[Movies] : 2024-07-12 13:25:01,116 : INFO : Completed database operations
+[Movies] : 2024-07-12 13:28:31,091 : DEBUG : DB file found and not zero size: C:\Users\kenda\Google Drive\Kendalls Flashdrive\Computer Science\GitHub\sdcce-python-cert\COMP_662_assignments\mod4\dbmovies.sqlite
+[Movies] : 2024-07-12 13:28:31,107 : DEBUG : DB Connected
+[Movies] : 2024-07-12 13:28:31,107 : DEBUG : Cursor set
+[Movies] : 2024-07-12 13:28:31,108 : DEBUG : DB Query executed and returned:
+	Query: `UPDATE 'Movie' SET 'year' = 1995 WHERE 'name' = 'Toy Story';`
+[Movies] : 2024-07-12 13:28:44,251 : DEBUG : DB Query executed and returned:
+	Query: `DELETE FROM 'Movie' WHERE 'name' = 'Lawrence of Arabia';`
+[Movies] : 2024-07-12 13:28:46,398 : DEBUG : DB Query executed and returned:
+	Query: `SELECT m.name as Title, m.year as Year, m.minutes as Length, c.name as Genre FROM Movie as m JOIN Category as c ON m.categoryID = c.categoryID WHERE year = 1995;`
+[Movies] : 2024-07-12 13:28:51,241 : DEBUG : DB Query executed and returned:
+	Query: `SELECT m.name as Title, m.year as Year, m.minutes as Length, c.name as Genre FROM Movie as m JOIN Category as c ON m.categoryID = c.categoryID WHERE year = 1994;`
+[Movies] : 2024-07-12 13:28:52,719 : DEBUG : Transactions committed
+[Movies] : 2024-07-12 13:28:52,719 : DEBUG : DB Closed
+[Movies] : 2024-07-12 13:28:52,734 : INFO : Completed database operations
