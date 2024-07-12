@@ -54,10 +54,10 @@ def db_runquery(cur, query):
         headers = []
         if rows:
             headers = [desc[0] for desc in cur.description]
-        logging.debug(f"DB Query executed and returned:\n\tQuery: `{query}`".format())
+        logging.debug(f"DB Query executed and returned:\n\tQuery: {query}".format())
         return rows, headers
     except sqlite3.Error as error:
-            logging.error(f"Error executing query:\n\tError: {error}\n\tQuery: `{query}`".format())
+            logging.error(f"Error executing query:\n\tError: {error}\n\tQuery: {query}".format())
 
 def db_select(cur, table, header):  # TODO finish SELECT function if needed
     pass # TODO
