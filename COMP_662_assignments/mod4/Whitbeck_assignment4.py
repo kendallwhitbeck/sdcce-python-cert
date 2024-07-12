@@ -16,7 +16,6 @@ Usage (Bash):
 """
 
 # TODO before delivering, comment out below and place db_utils.py in same folder instead.
-print(f"# TODO before delivering, comment out below and place db_utils.py in same folder instead.")
 import sys
 sys.path.append("C:\\Users\\kenda\\Google Drive\\Kendalls Flashdrive\\Computer Science\\GitHub\\sdcce-python-cert")
 # TODO comment out above
@@ -26,12 +25,12 @@ import sqlite3
 import logging
 import db_utils as db  # Logging sqlite3 database functions.
 
-def db_update(cur, table="Movie", column="movieID", value=1995, primarykey="movieID", condition=5):
+def db_update(cur, table="Movie", attribute="year", value=1995, primarykey="movieID", condition=5):
     """ Update database entry.
     """
     # Define update query
     query_update = str(f"UPDATE {table} "
-                       f"SET {column} = {value} "
+                       f"SET {attribute} = {value} "
                        f"WHERE {primarykey} = {condition};")
     # Execute update query
     db.db_runquery(cur, query_update)
@@ -45,6 +44,7 @@ def db_delete(cur, table="Movie", primarykey="movieID", condition=5):
 
     # Prompt user to confirm deletion
     run_deletion = str(input(f"Are you sure you want to delete {primarykey}={condition} from the `{table}` table (y/n)?"))
+    print()  # newline
 
     # If user confirms deletion
     if run_deletion == "y":
@@ -55,7 +55,7 @@ def db_delete(cur, table="Movie", primarykey="movieID", condition=5):
         print("Deletion aborted.\n")
         
 def db_lookup_by_year(cur):
-    """ Lookup movie by user-input year.
+    """ Look up movie by user-input year.
     """
     run_loopkup = "y"
     while run_loopkup == "y":
@@ -92,20 +92,21 @@ def db_print_table(headers, rows):
     # Display header and row results in a tabular format.
     for index, header in enumerate(headers):
         if index == 0:  # First header.
-            print("| ", header, end="\t")
+            print(f"| __{header}__", end="\t")
         elif index == len(headers) - 1:  # Last header.
-            print(header, end="\t|\n")
+            print(f"__{header}__", end="\t|\n")
         else:
-            print(header, end="\t")
+            print(f"__{header}__", end="\t")
     # Print value of each attribute in each row.
     for row in data_list:
         for index, value in enumerate(row.values()):
-            if index == 0:
+            if index == 0:  # First value in row.
                 print("| ", value, end="\t")
             elif index == len(row.values()) - 1:  # Last value in row.
-                print(value, end="\t|\n\n")
+                print(value, end="\t|\n")
             else:
                 print(value, end="\t")
+    print()  # newline
 
 def main():
     """ Connect to a database, update entries, and look up values.
@@ -115,6 +116,8 @@ def main():
         os.system('cls')
     else:  # Linux or MacOS.
         os.system('clear')
+
+    print(f"# TODO before delivering, comment out sys.path.append lines and place db_utils.py in same folder instead.")
 
     # Use name of this Python script to name log file.
     script_filename = os.path.splitext(os.path.basename(__file__))[0]
