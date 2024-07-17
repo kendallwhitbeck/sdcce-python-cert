@@ -55,7 +55,7 @@ def db_delete(cur, table, where_attribute, where_value):
                        f"WHERE {where_attribute} = {where_value};")
 
     # Prompt user to confirm deletion
-    run_deletion = str(input(f"Are you sure you want to delete {where_attribute}={where_value} from the {table} table (y/n)?"))
+    run_deletion = str(input(f"Are you sure you want to delete {where_attribute}={where_value} from the {table} table (y/n)?")).strip().lower()
     print()  # newline
 
     # If user confirms deletion
