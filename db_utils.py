@@ -17,7 +17,7 @@ def log_config(logfile=None, table_topic="Movies"):  # TODO consider adding logg
     if logfile is None:
         # If desired .log file not provided, use the name of this Python script to name the log file.
         filename = os.path.splitext(os.path.basename(__file__))[0]
-        logfile = f"{filename}.log" ## NOTE this returns logging_sqlite3.log, not the calling script's <name>.log
+        logfile = f"{filename}.log" ## NOTE this returns db_utils.log, not the calling script's <name>.log
 
     # Configure logging.
     logging.basicConfig(
@@ -62,7 +62,7 @@ def db_runquery(cur, query):
 def db_select(cur, table, header):  # TODO finish SELECT function if needed
     pass # TODO
 
-def db_insert(cur, table, headers, values):  # TODO Finsih Insert function if needed
+def db_insert(cur, table, headers, values):  # TODO finish Insert function if needed
     """ Insert SQL Query """
     query_insert = f"INSERT into {table} ({headers}) VALUES ({values})"
     print(query_insert)
