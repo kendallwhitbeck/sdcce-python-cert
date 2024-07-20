@@ -9,7 +9,6 @@ import db_utils as db
 
 def print_years(res):
     plt.hist(res, bins=40)
-    # mpl.pyplot.hist(res, bins=40)
     plt.ylabel('Number of Movies')
     plt.xlabel('Year Released')
     plt.locator_params(axis='y', integer=True)
