@@ -68,6 +68,72 @@ def db_insert(cur, table, headers, values):  # TODO finish Insert function if ne
     print(query_insert)
     pass # TODO
 
+def db_update(cur, table, update_attribute, update_value, where_attribute, where_value):
+    """ Update database entry.
+    """
+    # Sanitize input and insert quoutes for strings to enable querying whitespace
+    if type(table) == str: table = f'"{str(table)}"'
+    if type(update_attribute) == str: update_attribute = f'"{str(update_attribute)}"'
+    if type(update_value) == str: update_value = f'"{str(update_value)}"'
+    if type(where_attribute) == str: where_attribute = f'"{str(where_attribute)}"'
+    if type(where_value) == str: where_value = f'"{str(where_value)}"'
+
+    # Define update query
+    query_update = str(f"UPDATE {table} "
+                       f"SET {update_attribute} = {update_value} "
+                       f"WHERE {where_attribute} = {where_value};")
+    # Execute update query
+    db_runquery(cur, query_update)
+
+def db_delete(cur, table, where_attribute, where_value):
+    """ Delete database entry.
+    """
+    # Sanitize input and insert quoutes for strings to enable querying whitespace
+    if type(table) == str: table = f'"{str(table)}"'
+    if type(where_attribute) == str: where_attribute = f'"{str(where_attribute)}"'
+    if type(where_value) == str: where_value = f'"{str(where_value)}"'
+
+    # Define delete query
+    query_delete = str(f"DELETE FROM {table} "
+                       f"WHERE {where_attribute} = {where_value};")
+
+    # Prompt user to confirm deletion
+    run_deletion = str(input(f"Are you sure you want to delete {where_attribute}={where_value} from the {table} table (y/n)?")).strip().lower()
+    print()  # newline
+
+    # If user confirms deletion
+    if run_deletion == "y":
+        # Execute delete query
+        db_runquery(cur, query_delete)
+    else:
+        # Abort deletion
+        print("Deletion aborted.\n")
+
+def db_print_table(headers, rows):
+    """ Print table of results matching headers and rows returned by a SELECT query.
+    """
+    # Convert rows to a list of dictionaries.
+    data_list = [dict(row) for row in rows]
+
+    # Display header and row results in a tabular format.
+    for index, header in enumerate(headers):
+        if index == 0:  # First header.
+            print(f"| __{header}__", end="\t")
+        elif index == len(headers) - 1:  # Last header.
+            print(f"__{header}__", end="\t|\n")
+        else:
+            print(f"__{header}__", end="\t")
+    # Print value of each attribute in each row.
+    for row in data_list:
+        for index, value in enumerate(row.values()):
+            if index == 0:  # First value in row.
+                print("| ", value, end="\t")
+            elif index == len(row.values()) - 1:  # Last value in row.
+                print(value, end="\t|\n")
+            else:
+                print(value, end="\t")
+    print()  # newline
+
 def main():
     """ Demonstration of the logging and sqlite3 functions that are defined in this module. """
     dbfile = 'chinook.db'
