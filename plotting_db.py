@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 
 import db_utils as db
 
-def print_years(res):
-    plt.hist(res, bins=40)
+def plot_years(allyears, bins=40):
+    plt.hist(allyears, bins)
     plt.ylabel('Number of Movies')
     plt.xlabel('Year Released')
     plt.locator_params(axis='y', integer=True)
@@ -26,11 +26,16 @@ def main():
 
     allyears = []
     query = 'SELECT year from Movie'
-    res, headers = db.db_runquery(cur, query )
-    for result in res:
-        allyears.append(result[0])
+    rows, headers = db.db_runquery(cur, query)
+    db.db_print_table(headers, rows)
+    for row in rows:
+        allyears.append(row[0])
 
-    print_years(allyears)
+    plot_years(allyears, 40)
+    # plot_years(allyears, 100)
+    # plot_years(allyears, 10)
+    plot_years(allyears, 51)  # 2013-1962=51 is the range from largest to smallest year;
+                              # thus the most accurate # of bins
 
 if __name__ == "__main__":
     main()
