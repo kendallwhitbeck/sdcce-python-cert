@@ -164,3 +164,4 @@ cython_debug/
 **\.log
 **/.log
 COMP_662_assignments/mod4/Whitbeck_assignment4.log
+__pycache__
