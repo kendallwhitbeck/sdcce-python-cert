@@ -34,11 +34,10 @@ def main():
     else:  # Linux or MacOS.
         os.system('clear')
 
-    # Use name of this Python script to name log file.
+    # Configure logging using name of this Python script to name log file
+    # (NOTE: currently hardcoded to set root logger at DEBUG level). 
     script_filename = os.path.splitext(os.path.basename(__file__))[0]
     log_filename = f"{script_filename}.log"
-
-    # Configure logging (NOTE: currently hardcoded to set root logger at DEBUG level).
     db.log_config(log_filename)
 
     # Start program.
