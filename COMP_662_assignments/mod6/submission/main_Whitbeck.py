@@ -2,11 +2,7 @@ from flask import Flask, render_template, request
 import sqlite3 as sql
 import logging
 import os
-# TODO before delivering, comment out below and place db_utils.py in same folder instead.
-import sys
-sys.path.append("C:\\Users\\kenda\\Google Drive\\Kendalls Flashdrive\\Computer Science\\GitHub\\sdcce-python-cert")
-# TODO comment out above
-import db_utils as db  # TODO place db_utils.py in submission folder and append "--Whitbeck" to filename
+import dbcalls_Whitbeck as db
 
 app = Flask(__name__)
 
@@ -27,7 +23,7 @@ def view():
         return render_template("view.html", rows=f"Error displaying data: {error}".format())
     finally:
         if conn:
-            conn.commit()  # Commit any transactions to database.
+            conn.commit()  # Commit any tranasactions to database.
             logging.debug("Transactions committed".format())
             conn.close()
 
@@ -66,7 +62,7 @@ def updaterec():
             return render_template("updateresult.html", message=f"Error updating record: {error}".format())
         finally:
             if conn:
-                conn.commit()  # Commit any transactions to database.
+                conn.commit()  # Commit any tranasactions to database.
                 logging.debug("Transactions committed".format())
                 conn.close()
 
@@ -94,7 +90,7 @@ def searchrec():
             return render_template("searchresult.html", rows=f"Error displaying data: {error}".format())
         finally:
             if conn:
-                conn.commit()  # Commit any transactions to database.
+                conn.commit()  # Commit any tranasactions to database.
                 logging.debug("Transactions committed".format())
                 conn.close()
 
@@ -121,7 +117,7 @@ def deleterec():
             return render_template("deleteresult.html", message=f"Error deleting data: {error}".format())
         finally:
             if conn:
-                conn.commit()  # Commit any transactions to database.
+                conn.commit()  # Commit any tranasactions to database.
                 logging.debug("Transactions committed".format())
                 conn.close()
 

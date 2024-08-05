@@ -3,7 +3,7 @@
 """
 Module: db_utils
 Description: Database utility functions using SQLite3 with logging.
-COMP 662: Programming Databases with Python - SDCCE Spring 2024
+COMP 662: Programming Databases with Python - SDCCD CCE  Spring 2024
 Original author: Kathy Herring Hayashi
 Revised by: Kendall Whitbeck
 """
@@ -11,9 +11,9 @@ import sqlite3
 import os
 import logging
 import matplotlib.pyplot as plt
-import pandas as pd
+# import matplotlib.str
 
-def log_config(logfile=None, db_topic="No Topic Provided"):  # TODO consider adding logging level as an input parameter
+def log_config(logfile=None, table_topic="Movies"):  # TODO consider adding logging level as an input parameter
     """ Configure logging.
     """
     if logfile is None:
@@ -25,7 +25,7 @@ def log_config(logfile=None, db_topic="No Topic Provided"):  # TODO consider add
     logging.basicConfig(
         filename=logfile,
         level=logging.DEBUG,  # Options: DEBUG, INFO, ERROR, WARNING, CRITICAL
-        format = f"[{db_topic}] : %(asctime)s : %(levelname)s : %(message)s"
+        format = f"[{table_topic}] : %(asctime)s : %(levelname)s : %(message)s"
         )
 
     # Set matplotlib logging level to ERROR to suppress `findfont` debug messages.
@@ -79,12 +79,12 @@ def db_select(cur, table, headers="*", where_attributes=None, where_values=None)
     The WHERE clause utilizes LIKE to allow partial matches, by design.
     For more exact results, the user should provide additional parameters for where_attributes and where_values.
     """
-    # Sanitize input and insert quotes for strings to enable querying whitespace
+    # Sanitize input and insert quoutes for strings to enable querying whitespace
     if type(table) == str: table = f'"{str(table)}"'
     for idx, header in enumerate(headers):
         if type(header) == str and header != "*":
             headers[idx] = f'"{str(header)}"'
-
+    
     # Convert lists to tuples to match SQL syntax
     if type(headers) == list: headers = tuple(headers)
     if type(where_attributes) == list: where_attributes = tuple(where_attributes)
@@ -108,13 +108,13 @@ def db_select(cur, table, headers="*", where_attributes=None, where_values=None)
     # Execute SELECT query
     rows, headers = db_runquery(cur, query_select)
 
-    # Return rows and headers from SELECT query
+    # Return rows and headers from SELECT quert
     return rows, headers
 
 def db_insert(cur, table, headers, values): 
     """ INSERT SQL Query to add new entry to database.
     """
-    # Sanitize input and insert quotes for strings to enable querying whitespace
+    # Sanitize input and insert quoutes for strings to enable querying whitespace
     headers = list(headers)  # Convert tuple to list to enable sanitizing
     if type(table) == str: table = f'"{str(table)}"'
     for idx, header in enumerate(headers):
@@ -133,7 +133,7 @@ def db_insert(cur, table, headers, values):
 def db_update(cur, table, update_attribute, update_value, where_attribute, where_value):
     """ Update database entry.
     """
-    # Sanitize input and insert quotes for strings to enable querying whitespace
+    # Sanitize input and insert quoutes for strings to enable querying whitespace
     if type(table) == str: table = f'"{str(table)}"'
     if type(update_attribute) == str: update_attribute = f'"{str(update_attribute)}"'
     if type(update_value) == str: update_value = f'"{str(update_value)}"'
@@ -150,7 +150,7 @@ def db_update(cur, table, update_attribute, update_value, where_attribute, where
 def db_delete(cur, table, where_attribute, where_value, force_delete=False):
     """ Delete database entry.
     """
-    # Sanitize input and insert quotes for strings to enable querying whitespace
+    # Sanitize input and insert quoutes for strings to enable querying whitespace
     if type(table) == str: table = f'"{str(table)}"'
     if type(where_attribute) == str: where_attribute = f'"{str(where_attribute)}"'
     if type(where_value) == str: where_value = f'"{str(where_value)}"'
@@ -199,21 +199,6 @@ def db_print_table(headers, rows):
                 print(value, end="\t")
     print()  # newline
 
-def print_full_table(x):
-    """ Print a table of results from a pandas dataframe.
-    """
-    pd.set_option('display.max_rows', None)
-    pd.set_option('display.max_columns', None)
-    pd.set_option('display.width', None)
-    pd.set_option('display.float_format', '{:20,.2f}'.format)
-    pd.set_option('display.max_colwidth', None)
-    print(x)
-    pd.reset_option('display.max_rows')
-    pd.reset_option('display.max_columns')
-    pd.reset_option('display.width')
-    pd.reset_option('display.float_format')
-    pd.reset_option('display.max_colwidth')
-
 def db_plot_line(rows, legend_labels=None):
     """ Plot line graph of results matching rows returned by a SELECT query.
     """
@@ -249,7 +234,7 @@ def db_plot_line(rows, legend_labels=None):
 
     # Format graph.
     if legend_labels is not None: plt.legend()
-    plt.grid()
+    # plt.grid()  # NOTE: disabled for COMP 662 Assignment #5
     # plt.ylim(0, 100)  # NOTE: disabled for COMP 662 Assignment #5
 
     # Display the graph.
@@ -282,7 +267,7 @@ def main():
         cur = db_cursor(con)
         query = 'SELECT SQLITE_VERSION()'
         res = db_runquery(cur, query )
-        print("SQLite version: " , res[0][0])
+        print("SQLLITE version: " , res[0][0])
         rows, headers = db_select(cur, "playlists")
         db_print_table(headers, rows)
     except sqlite3.Error as error:

@@ -4,7 +4,15 @@
 			"path": "."
 		}
 	],
-	"settings": {},
+    "settings": {
+        "cSpell.ignoreWords": [
+            "Kendalls",
+            "kenda"
+        ],
+        "cSpell.words": [
+            "programname"
+        ]
+    },
 	"extensions": {
 		"recommendations": [
 			"codeium.codeium"
