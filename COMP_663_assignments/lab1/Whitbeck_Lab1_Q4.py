@@ -11,6 +11,7 @@ COMP 663: Python for Data Science
 import pandas as pd
 import plotly.express as px
 import matplotlib.pyplot as plt
+import numpy as np
 
 def main():
     # load the file titanic.csv into a data frame
@@ -29,20 +30,53 @@ def main():
     # create bar charts for the following:
 
     # passengers in first class who embarked in Southampton grouped by sex
-    # fig_first_south_sex =px.bar(first_south, x='sex') # create bar chart
-    # fig_first_south_sex.show()  # show bar chart
-
-    first_south['sex'].value_counts().plot(kind='bar')
-    # plt.bar(first_south['sex'].value_counts().index, first_south['sex'].value_counts().values)
+    first_south['sex'].value_counts(normalize=False).sort_index().plot(kind='bar')
     plt.xlabel('First')
     plt.ylabel('Count')
     plt.title('Passenger Class')
     plt.xticks(rotation=0)
-    plt.grid(axis='y', which='major', linestyle='--', linewidth=0.5, zorder=0)
+    plt.grid(axis='y')
+    plt.legend(['female', 'male'])  # TODO why does this not show "male" in the legend?
+    plt.show()  # NOTE uncomment this line before submitting
+    # # plot using plotly
+    # fig = px.bar(first_south, x='sex', title='Passenger Class')
+    # fig.update_legends()
+    # fig.show()
+
+    # passengers in second and third class grouped by survived status
+    second_third_survived = second_third[second_third.survived == 1]
+    second_third_not_survived = second_third[second_third.survived == 0]
+
+    # count number of passengers for each class (2nd and 3rd) who survived and did not survive
+    survived_counts = second_third_survived['pclass'].value_counts().sort_index()
+    not_survived_counts = second_third_not_survived['pclass'].value_counts().sort_index()
+
+    # X locations for the groups
+    x = np.arange(len(survived_counts))  # This gives positions for 2nd and 3rd classes (0 and 1)
+
+    # plot the bars
+    width = 0.35
+    _, ax = plt.subplots()
+    ax.bar(x - width/2, survived_counts, width, label='Survived', color='green')
+    ax.bar(x + width/2, not_survived_counts, width, label='Not Survived', color='purple')
+
+    # plt.bar([2, 3], second_third_survived['pclass'].value_counts(), label='Survived', color='blue')
+    # plt.bar([2, 3], second_third_not_survived['pclass'].value_counts(), label='Not Survived', color='red')
+
+    # second_third_survived['pclass'].value_counts().plot(kind='bar', position=0)
+    # second_third_not_survived['pclass'].value_counts().plot(kind='bar', position=1)
+
+    # second_third['survived'].value_counts().plot(kind='bar')  # TODO fix this to show 2 pairs of bars, one for second class and one for third class, where each pair has one bar for Survived and one for Not Survived
+
+    # plt.xlabel('First')
+    ax.set_xlabel('Passenger Class')
+    ax.set_ylabel('Count')
+    ax.set_xticks(x)
+    ax.set_xticklabels(['Second', 'Third'])
+    ax.grid(axis='y')
+    ax.legend(['Survived', 'Not Survived'])
     plt.show()
-
-    # passengers in second and third class grouped by survival status
-
+    
 # ensure main() is executed only if this .py file is executed directly (i.e., not imported by another .py file)
 if __name__ == '__main__':
     main()
