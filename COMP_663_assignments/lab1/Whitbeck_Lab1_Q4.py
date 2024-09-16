@@ -27,21 +27,20 @@ def main():
     print(first_south.head())
     print(second_third.head())
 
-    # create bar charts for the following:
-
-    # passengers in first class who embarked in Southampton grouped by sex
-    first_south['sex'].value_counts(normalize=False).sort_index().plot(kind='bar')
-    plt.xlabel('First')
-    plt.ylabel('Count')
-    plt.title('Passenger Class')
-    plt.xticks(rotation=0)
-    plt.grid(axis='y')
-    plt.legend(['female', 'male'])  # TODO why does this not show "male" in the legend?
-    plt.show()  # NOTE uncomment this line before submitting
-    # # plot using plotly
-    # fig = px.bar(first_south, x='sex', title='Passenger Class')
-    # fig.update_legends()
-    # fig.show()
+    # create bar chart for passengers in first class who embarked in Southampton grouped by sex
+    first_south_counts = first_south['sex'].value_counts(normalize=False).sort_index()
+    _, ax = plt.subplots()
+    ax.bar(first_south_counts.index, first_south_counts.values, color=['blue', 'red'])
+    # plt.bar(first_south_counts.index, first_south_counts.values, color=['blue', 'red'])
+    
+    # format bar chart
+    ax.set_xlabel('Passenger Class: First')
+    ax.set_ylabel('Count')
+    # ax.set_xticks(first_south_counts)  # TODO what to put in the parentheses so that "First" shows as a tick label for both bars?
+    ax.set_xticklabels(first_south_counts.index)
+    ax.grid(axis='y')
+    # ax.legend(first_south_counts.index)  # TODO why does this not show "male" in the legend?
+    plt.show()
 
     # passengers in second and third class grouped by survived status
     second_third_survived = second_third[second_third.survived == 1]
@@ -51,24 +50,15 @@ def main():
     survived_counts = second_third_survived['pclass'].value_counts().sort_index()
     not_survived_counts = second_third_not_survived['pclass'].value_counts().sort_index()
 
-    # X locations for the groups
-    x = np.arange(len(survived_counts))  # This gives positions for 2nd and 3rd classes (0 and 1)
+    # x locations for the groups
+    x = np.arange(len(survived_counts))  # this gives positions for 2nd and 3rd classes (0 and 1)
 
-    # plot the bars
+    # create bar chart
     width = 0.35
     _, ax = plt.subplots()
     ax.bar(x - width/2, survived_counts, width, label='Survived', color='green')
     ax.bar(x + width/2, not_survived_counts, width, label='Not Survived', color='purple')
-
-    # plt.bar([2, 3], second_third_survived['pclass'].value_counts(), label='Survived', color='blue')
-    # plt.bar([2, 3], second_third_not_survived['pclass'].value_counts(), label='Not Survived', color='red')
-
-    # second_third_survived['pclass'].value_counts().plot(kind='bar', position=0)
-    # second_third_not_survived['pclass'].value_counts().plot(kind='bar', position=1)
-
-    # second_third['survived'].value_counts().plot(kind='bar')  # TODO fix this to show 2 pairs of bars, one for second class and one for third class, where each pair has one bar for Survived and one for Not Survived
-
-    # plt.xlabel('First')
+    # format bar chart
     ax.set_xlabel('Passenger Class')
     ax.set_ylabel('Count')
     ax.set_xticks(x)
