@@ -4,6 +4,10 @@
     },
     "[markdown]": {
         "files.trimTrailingWhitespace": false
-    }
+    },
+    "cSpell.words": [
+        "internetusage",
+        "qsec"
+    ]
 
 }

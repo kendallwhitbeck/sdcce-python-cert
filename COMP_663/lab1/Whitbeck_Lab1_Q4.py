@@ -31,15 +31,12 @@ def main():
     first_south_counts = first_south['sex'].value_counts(normalize=False).sort_index()
     _, ax = plt.subplots()
     ax.bar(first_south_counts.index, first_south_counts.values, color=['blue', 'red'])
-    # plt.bar(first_south_counts.index, first_south_counts.values, color=['blue', 'red'])
-    
+
     # format bar chart
     ax.set_xlabel('Passenger Class: First')
     ax.set_ylabel('Count')
-    # ax.set_xticks(first_south_counts)  # TODO what to put in the parentheses so that "First" shows as a tick label for both bars?
     ax.set_xticklabels(first_south_counts.index)
     ax.grid(axis='y')
-    # ax.legend(first_south_counts.index)  # TODO why does this not show "male" in the legend?
     plt.show()
 
     # passengers in second and third class grouped by survived status
@@ -58,6 +55,7 @@ def main():
     _, ax = plt.subplots()
     ax.bar(x - width/2, survived_counts, width, label='Survived', color='green')
     ax.bar(x + width/2, not_survived_counts, width, label='Not Survived', color='purple')
+
     # format bar chart
     ax.set_xlabel('Passenger Class')
     ax.set_ylabel('Count')
@@ -66,7 +64,7 @@ def main():
     ax.grid(axis='y')
     ax.legend(['Survived', 'Not Survived'])
     plt.show()
-    
+
 # ensure main() is executed only if this .py file is executed directly (i.e., not imported by another .py file)
 if __name__ == '__main__':
     main()
