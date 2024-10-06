@@ -166,3 +166,5 @@ cython_debug/
 COMP_662_assignments/mod4/Whitbeck_assignment4.log
 __pycache__
 COMP_662_assignments/mod6/.backup/
+**~$*.docx
+.vscode/

@@ -12,6 +12,6 @@ def main():
 
     pass # TODO implement code
 
-# ensure main() is executed only if this .py file is executed directly (i.e., not imported by another .py file)
+# Ensure main() is executed only if this .py file is executed directly (i.e., not imported by another .py file)
 if __name__ == "__main__":
     main()
