@@ -168,3 +168,5 @@ __pycache__
 COMP_662_assignments/mod6/.backup/
 **~$*.docx
 .vscode/
+.vscode/settings.json
+COMP_663/lab4/README.md
