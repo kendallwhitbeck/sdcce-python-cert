@@ -8,16 +8,9 @@ San Diego College of Continuing Education (SDCCE) Student ID: 5550203278
 COMP 663: Python for Data Science
 """
 import pandas as pd, numpy as np
-# import statsmodels.formula.api as smf  # TODO needed?
-# import matplotlib as plt  # TODO needed?
-# import seaborn as sns  # TODO needed?
 from sklearn import metrics
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-
-# from matplotlib.colors import ListedColorMap  # TODO needed?
-# from sklearn import neighbors, datasets  # TODO needed?
-# from sklearn.pipeline import Pipeline  # TODO needed?
 
 def main():
     # load nbaallelo.csv into a dataframe 
@@ -35,12 +28,10 @@ def main():
 
     # build the logistic model using the LogisticRegression function with wins as the target variable and elo_i as the predictor.
     logisticRegr = LogisticRegression()
-    # logisticRegr.fit(train[["elo_i"]], train["wins"])
-    logisticRegr.fit(train[["pts"]], train["wins"])  # TODO debug only, remove before delivery
+    logisticRegr.fit(train[["elo_i"]], train["wins"])
 
     # use the test set to predict the wins from the elo_i score
-    # predictions = logisticRegr.predict(test[["elo_i"]])  # code to predict wins
-    predictions = logisticRegr.predict(test[["pts"]])  # TODO debug only, remove before delivery
+    predictions = logisticRegr.predict(test[["elo_i"]])  # code to predict wins
 
     # generate confusion matrix
     conf = metrics.confusion_matrix(test["wins"], predictions)  # code to generate confusion matrix
