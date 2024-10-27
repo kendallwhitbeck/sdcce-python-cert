@@ -6,8 +6,11 @@
         "files.trimTrailingWhitespace": false
     },
     "cSpell.words": [
+        "ANOVA",
         "internetusage",
-        "qsec"
+        "nbaallelo",
+        "qsec",
+        "statsmodels"
     ]
 
 }
